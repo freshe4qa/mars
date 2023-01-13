@@ -84,7 +84,7 @@ marsd config keyring-backend test
 marsd init $NODENAME --chain-id $MARS_CHAIN_ID
 
 # download genesis and addrbook
-wget https://raw.githubusercontent.com/dylanschultzie/networks-3/raw/main/ares-1/genesis.json -O $HOME/.marsd/config/genesis.json
+curl -s https://raw.githubusercontent.com/dylanschultzie/networks-3/main/ares-1/genesis.json > $HOME/.mars/config/genesis.json
 
 # set minimum gas price
 sed -i -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0umars\"/" $HOME/.mars/config/app.toml
