@@ -122,7 +122,7 @@ LimitNOFILE=10000
 WantedBy=multi-user.target
 EOF
 
-marsd tendermint unsafe-reset-all --home $HOME/.mars
+marsd tendermint unsafe-reset-all
 
 # start service
 sudo systemctl daemon-reload
